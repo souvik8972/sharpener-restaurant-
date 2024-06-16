@@ -1,3 +1,10 @@
+
+import Card from '../UI/Card';
+import FoodItem from './FoodItem';
+import classes from "./Available.module.css"
+// Make sure the path is correct based on your file structure
+
+
 const DUMMY_MEALS = [
     {
         id: 'm1',
@@ -26,18 +33,26 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeal = () => {
+    return (
+        <div>
+        
+            <Card>
+                <ul className={classes.ul}>
+                    {
+                        DUMMY_MEALS.map(meal => (
+                            <FoodItem 
+                                key={meal.id}
+                                id={meal.id}
+                                name={meal.name}
+                                description={meal.description}
+                                price={meal.price}
+                            />
+                        ))
+                    }
+                </ul>
+            </Card>
+        </div>
+    );
+};
 
-  return (
-    <div>
-     <ul>
-        {
-            DUMMY_MEALS.map(meal => (
-                <li key={meal.id}>{meal.name}</li>
-            ))
-        }
-     </ul>
-    </div>
-  )
-}
-
-export default AvailableMeal
+export default AvailableMeal;
