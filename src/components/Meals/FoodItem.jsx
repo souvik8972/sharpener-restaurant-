@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import classes from "./FoodItem.module.css"
+import Input from "./Input";
 
 const FoodItem = ({ id, name, description, price }) => {
     return (
@@ -10,6 +11,7 @@ const FoodItem = ({ id, name, description, price }) => {
                 <div>{description}</div>
                 <div className={classes.price}>${price.toFixed(2)}</div>
             </div>
+            <Input></Input>
         </li>
     );
 };

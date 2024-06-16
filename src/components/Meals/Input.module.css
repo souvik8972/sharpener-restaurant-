@@ -1,0 +1,30 @@
+.form{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
+.form .label{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.form .input{
+    width: 30px;
+    border: 1px solid orange;
+}
+.form .button{
+    padding: 0;
+    width: 60px;
+    height: 20px;
+    margin: auto;
+    background-color: orange;
+    color: aliceblue;
+
+}
+.form .button:hover{
+    background-color: rgb(253, 254, 255);
+    color: orange;
+}
