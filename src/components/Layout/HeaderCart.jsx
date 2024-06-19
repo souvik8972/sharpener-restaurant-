@@ -2,10 +2,10 @@
 import classes from "./HeaderCart.module.css"
 import { IoCartOutline } from "react-icons/io5";
 
-const HeaderCart = () => {
+const HeaderCart = ({ onShowcart }) => {
   return (
     <div>
-          <button>
+      <button onClick={onShowcart}>
 
               <IoCartOutline />
               <span>Cart</span>

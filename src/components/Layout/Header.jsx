@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 
 import classes from "./Header.module.css"
 import HeaderCart from "./HeaderCart"
 
-const Header = () => {
+const Header = ({ onShowcart }) => {
     return (
         <div>
             <header className={classes.header}>
                 <h1> PracMeal</h1>
-                <HeaderCart/>
+                <HeaderCart onShowcart={onShowcart}/>
                 
             </header>
             <div className={classes["main-image"]}>
