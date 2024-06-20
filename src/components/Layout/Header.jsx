@@ -17,7 +17,7 @@ const Header = ({ onShowcart }) => {
                 <p>Ready to taste the best food in town?</p>
                 
             </div>
-                <img src="https://img.freepik.com/free-photo/view-ready-eat-delicious-meal-go_23-2151431768.jpg?t=st=1718539256~exp=1718542856~hmac=afed6a925c5354ce140c335766ecf54d1920e4c1367a976b16422e95a5244e37&w=1380" />
+                <img src="https://img.freepik.com/free-photo/view-ready-eat-delicious-meal-go_23-2151431768.jpg?t=st=1718854567~exp=1718858167~hmac=d3f671c04ff018afe8d3837cbb57f661495a4842a6a76bc805017d904d3e7f65&w=1380" />
             </div>
 
         </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 
 const CartContext=React.createContext({
-    item:[],
+    items:[],
     totalAmount:0,
     // eslint-disable-next-line no-unused-vars
     addItem:(item)=>{},

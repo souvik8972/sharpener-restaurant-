@@ -1,33 +1,39 @@
-// import React from 'react'
+/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import Modal from "../UI/Modal";
-import classes from "./Cart.module.css"
+import classes from "./Cart.module.css";
+import CartContext from "../../store/cart-context";
+import CartItem from "./CardItem";
+
 const Cart = ({ onHideCart }) => {
-    const cartitems = (
+    const cartCtx = useContext(CartContext);
+    const cartItemRemoveHandler =( id) => { }
+    const cartItemAddHandler = (item) => { }
+
+    const cartItems = (
         <ul className={classes["cart-items"]}>
-            {[{ id: "11", name: "sushi", amount: 13, price: 122.55 }].map((item) => (
-                <li key={item.id}>{item.name}</li>
+            {cartCtx.items.map((item) => (
+                <CartItem key={item.id} name={item.name} amount={item.amount} price={item.price}onRemove={cartItemRemoveHandler.bind(null,item.id)}
+                onAdd={cartItemAddHandler.bind(null,item)}></CartItem>
             ))}
         </ul>
     );
 
+    const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+
     return (
         <Modal onHideCart={onHideCart}>
-            {cartitems}
+            {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
-                <span>34.55</span>
+                <span>{totalAmount}</span>
             </div>
             <div className={classes.actions}>
-                <button onClick={onHideCart} className={classes["button--alt"]}> Close</button>
-                <button className={classes.button}> Order</button>
-
+                <button onClick={onHideCart} className={classes["button--alt"]}>Close</button>
+                <button className={classes.button}>Order</button>
             </div>
-
-
-
-
         </Modal>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;
