@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import classes from "./Modal.module.css";
 import ReactDOM from "react-dom";  // Correct the import statement
-import React from "react";
+
 
 const Backdrop = (props) => {
     return <div className={classes.backdrop} onClick={props.onClick}></div>;
